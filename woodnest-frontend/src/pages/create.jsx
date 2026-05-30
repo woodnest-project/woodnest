@@ -23,7 +23,6 @@ const Create = () => {
     const submitData = async (e) => {
         e.preventDefault();
 
-        // Validation based on class logic
         if (item.name === '') {
             alert("Enter Furniture Name");
             return;

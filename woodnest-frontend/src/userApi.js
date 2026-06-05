@@ -23,3 +23,12 @@ export const getAllFurniture = async () => {
         throw error;
     }
 };
+
+export const deleteFurniture = async (data) => {
+    try {
+        return await axios.post(`${URL}/delete`, data);
+    } catch (error) {
+        console.error("API Error in deleteFurniture:", error);
+        throw error;
+    }
+};

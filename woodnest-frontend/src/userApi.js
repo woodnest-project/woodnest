@@ -32,3 +32,21 @@ export const deleteFurniture = async (data) => {
         throw error;
     }
 };
+
+export const signupUser = async (userData) => {
+    try {
+        return await axios.post(`${URL}/api/auth/signup`, userData);
+    } catch (error) {
+        console.error("API Error in signupUser:", error);
+        throw error;
+    }
+};
+
+export const loginUser = async (userData) => {
+    try {
+        return await axios.post(`${URL}/api/auth/login`, userData);
+    } catch (error) {
+        console.error("API Error in loginUser:", error);
+        throw error;
+    }
+};

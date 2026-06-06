@@ -8,10 +8,13 @@ const addFurniture = async (req, res) => {
         }
 
         const newFurniture = new Furniture({
-            name: req.body.name,
+            title: req.body.title,
             price: req.body.price,
             category: req.body.category,
-            image: file.filename 
+            image: file.filename,
+            description: req.body.description || "Premium handcrafted wooden furniture designed for comfort and elegance.",
+            material: req.body.material || "Sheesham Wood",
+            stock: req.body.stock || 10
         });
 
         await newFurniture.save();

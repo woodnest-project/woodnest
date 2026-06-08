@@ -4,6 +4,8 @@ import Home from './pages/home';
 import Create from './pages/create';
 import Login from './pages/login';
 import Signup from './pages/signup';
+import Cart from './pages/cart';
+import Orders from './pages/orders';
 
 function App() {
     return (
@@ -13,6 +15,8 @@ function App() {
                 <Route path="/add" element={<Create />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
+                <Route path="/cart" element={<Cart />} />
+                <Route path="/orders" element={<Orders />} />
             </Routes>
         </Router>
     );

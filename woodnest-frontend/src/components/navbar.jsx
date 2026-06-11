@@ -7,7 +7,6 @@ const Navbar = () => {
     const [cartCount, setCartCount] = useState(0);
 
     useEffect(() => {
-        // Read cart items count
         const savedCart = JSON.parse(localStorage.getItem('woodnest_cart')) || [];
         const count = savedCart.reduce((sum, item) => sum + item.quantity, 0);
         setCartCount(count);
@@ -24,15 +23,12 @@ const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow px-4 py-3">
             <div className="container-fluid">
-                <Link className="navbar-brand fw-bold text-warning" to="/">WoodNest</Link>
+                <Link className="navbar-brand fw-bold text-warning fs-2" to="/">WoodNest</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
-                        <li className="nav-item">
-                            <Link className="nav-link text-white me-3" to="/">Browse Items</Link>
-                        </li>
                         <li className="nav-item">
                             <Link className="nav-link text-white me-3 position-relative" to="/cart">
                                 Shopping Cart 🛒

@@ -2,7 +2,6 @@ import axios from 'axios';
 
 const URL = 'http://localhost:8000';
 
-// --- INVENTORY APIS ---
 export const addFurniture = async (data) => {
     try {
         return await axios.post(`${URL}/add`, data, {
@@ -34,7 +33,6 @@ export const deleteFurniture = async (data) => {
     }
 };
 
-// --- AUTHENTICATION APIS ---
 export const registerUser = async (data) => {
     try {
         return await axios.post(`${URL}/api/auth/register`, data);
@@ -44,7 +42,6 @@ export const registerUser = async (data) => {
     }
 };
 
-// Alias to prevent any import errors in signup.jsx
 export const signupUser = registerUser;
 
 export const loginUser = async (data) => {
@@ -56,7 +53,6 @@ export const loginUser = async (data) => {
     }
 };
 
-// --- CHECKOUT & ORDER LOG APIS ---
 export const createOrder = async (orderData) => {
     try {
         return await axios.post(`${URL}/orders/create`, orderData);

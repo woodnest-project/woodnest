@@ -59,7 +59,6 @@ const Home = () => {
         <>
             <Navbar />
 
-            {/* FULL-WIDTH HERO SECTION (OUTSIDE OF CONTAINER) */}
             <div className="bg-dark text-white shadow-lg w-100" style={{ 
                 backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1600")', 
                 backgroundSize: 'cover', 
@@ -91,7 +90,6 @@ const Home = () => {
                 </div>
             </div>
 
-            {/* MAIN CATALOGUE CONTAINER */}
             <div className="container mt-5">
                 <div className="d-flex justify-content-between align-items-center mb-4">
                     <h2 className="fw-bold">WoodNest Premium Catalogue</h2>
@@ -127,7 +125,6 @@ const Home = () => {
                 </div>
             </div>
 
-            {/* Product Detail Modal */}
             {selectedProduct && (
                 <div className="modal show d-block" style={{background: 'rgba(0,0,0,0.6)'}}>
                     <div className="modal-dialog modal-lg">
@@ -147,7 +144,6 @@ const Home = () => {
                             <p><strong>Material:</strong> {selectedProduct.material || "Sustainably Sourced Solid Wood"}</p>
                             <p><strong>Stock Available:</strong> {selectedProduct.stock ?? "Available on Request"}</p>
                             
-                            {/* Ratings Section */}
                             <div className="mt-3 border-top pt-3">
                                 <h5>Ratings & Reviews</h5>
                                 <div className="text-warning">★★★★☆</div>
@@ -155,7 +151,6 @@ const Home = () => {
                                 <button className="btn btn-sm btn-dark">Submit Review</button>
                             </div>
 
-                            {/* Admin Delete */}
                             <div className="mt-4 pt-3 border-top text-end">
                                 <button onClick={() => handleDelete(selectedProduct._id)} className="btn btn-link text-danger text-decoration-none">Delete Listing (Admin Only)</button>
                             </div>
